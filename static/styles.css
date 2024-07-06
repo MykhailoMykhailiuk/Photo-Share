@@ -1,0 +1,132 @@
+/* Основні стилі для сторінки */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.blue-theme {
+    background-color: #e0f7fa;
+    color: #007bff;
+}
+
+.red-theme {
+    background-color: #ffebee;
+    color: #d32f2f;
+}
+
+.green-theme {
+    background-color: #e8f5e9;
+    color: #388e3c;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+main {
+    padding: 2em;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+#auth {
+    margin: 1em 0;
+}
+
+#photos, #user-photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#photos div, #user-photos div {
+    margin: 0.5em;
+    border: 1px solid #ddd;
+    padding: 1em;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1em;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+label {
+    margin-top: 1em;
+    width: 100%;
+    text-align: left;
+}
+
+input {
+    padding: 0.5em;
+    margin-top: 0.5em;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+p {
+    text-align: center;
+}
+
+/* Стилі для галереї зображень */
+#image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.image-grid .image {
+    width: 200px; /* Фіксована ширина */
+    height: 200px; /* Фіксована висота */
+}
+
+.image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Збереження пропорцій при заповненні контейнера */
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Forms</title>
+</head>
+<body>
+    <header>
+        <h1>Simple Forms for Routes</h1>
+    </header>
+
+    <main>
+        <section id="upload_image">
+          <h2>Upload Image</h2>
+          <form action="/images/upload/" method="post" enctype="multipart/form-data">
+              <label for="file">Image File:</label>
+              <input type="file" id="file" name="file" required><br><br>
+              <label for="description">Description:</label>
+              <input type="text" id="description" name="description" required><br><br>
+              <input type="submit" value="Upload">
+          </form>
+        </section>
+    
+        
+
+        <section id="update_image">
+            <h2>Update Image</h2>
+            <form action="/images/update/{image_id}" method="put">
+                <label for="image_id">Image ID:</label>
+                <input type="number" id="image_id" name="image_id" required><br><br>
+                <label for="description">New Description:</label>
+                <input type="text" id="description" name="description" required><br><br>
+                <input type="submit" value="Update">
+            </form>
+        </section>
+
+        <section id="get_all_images">
+            <h2>Get All Images</h2>
+            <form action="/images/show/" method="get">
+                <label for="limit">Limit:</label>
+                <input type="number" id="limit" name="limit" min="10" max="500" value="10"><br><br>
+                <label for="offset">Offset:</label>
+                <input type="number" id="offset" name="offset" min="0" max="10" value="0"><br><br>
+                <input type="submit" value="Get Images">
+            </form>
+        </section>
+
+        <section id="get_image">
+            <h2>Get Image</h2>
+            <form action="/images/" method="get">
+                <label for="image_id">Image ID:</label>
+                <input type="number" id="image_id" name="image_id" required><br><br>
+                <input type="submit" value="Get Image">
+            </form>
+        </section>
+
+        <section id="delete_image">
+            <h2>Delete Image</h2>
+            <form action="/images/{image_id}" method="delete">
+                <label for="image_id">Image ID:</label>
+                <input type="number" id="image_id" name="image_id" required><br><br>
+                <input type="submit" value="Delete">
+            </form>
+        </section>
+
+        <section id="get_qr_code">
+            <h2>Get QR Code</h2>
+            <form action="/images/qr_code" method="get">
+                <label for="image_id">Image ID:</label>
+                <input type="number" id="image_id" name="image_id" required><br><br>
+                <input type="submit" value="Get QR Code">
+            </form>
+        </section>
+
+        <section id="transform_image">
+            <h2>Transform Image</h2>
+            <form action="/images/transform" method="post">
+                <label for="image_id">Image ID:</label>
+                <input type="number" id="image_id" name="image_id" required><br><br>
+                <label for="transformation">Transformation:</label>
+                <input type="text" id="transformation" name="transformation" required><br><br>
+                <input type="submit" value="Transform">
+            </form>
+        </section>
+
+        <section id="transform_image_avatar">
+            <h2>Transform Image for Avatar</h2>
+            <form action="/images/transform/avatar" method="post">
+                <label for="image_id">Image ID:</label>
+                <input type="number" id="image_id" name="image_id" required><br><br>
+                <label for="transformation">Transformation:</label>
+                <input type="text" id="transformation" name="transformation" required><br><br>
+                <input type="submit" value="Transform for Avatar">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by Your Name</p>
+    </footer>
+</body>
+</html>

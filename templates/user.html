@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>User Page</title>
+</head>
+<body class="red-theme">
+    <header>
+        <h1>Your Photos</h1>
+    </header>
+    <main>
+        <div id="user-photos">
+            <!-- User's photos will be inserted here -->
+        </div>
+        <div id="user-info">
+            <h2>Edit Profile</h2>
+            <form id="edit-profile-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 PhotoShare. All rights reserved.</p>
+    </footer>
+    <script src="/static/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Image Gallery</title>
+</head>
+<body class="blue-theme">
+    <header>
+        <h1>Welcome to Image Gallery</h1>
+        <div id="auth">
+            <button id="login">Login</button>
+            <button id="logout">Logout</button>
+        </div>
+    </header>
+    <main>
+        <h2>All Photos</h2>
+        <div id="image-gallery" class="image-grid">
+            {% for image in images %}
+            <div class="image">
+                <img src="{{ image.url }}" alt="Image {{ image.id }}">
+                <!-- Додайте інші дані зображення, які вам потрібні -->
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+    <footer>
+        <p>&copy; All rights reserved.</p>
+    </footer>
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
